@@ -1,0 +1,74 @@
+@import url(https://aziz-sobirov.github.io/AS-library/css/as.css);
+:root{
+    --cl:#006d77;
+}
+#app{
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    form{
+        padding:50px 5vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            textarea{
+                padding: 10px;
+                min-height: 40vh;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 600;
+                resize: none;
+                outline: none;
+                box-shadow: 0 0 0 1px #00000070;
+                border-radius: 4px;
+                transition: 0.5s;
+                &:focus{
+                    box-shadow: 0 0 0 2px var(--cl);
+                }
+                &:last-child{
+                    margin-top: 15px;
+                }
+            }
+        }
+        .btn{
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                &:last-child{
+                    margin-left: 10px;
+                    background: #eaebed;
+                    a{
+                        color: var(--cl);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:758px){
+    #app{
+        form{
+            padding: 10vh 5vw;
+            .content{
+                flex-direction: row;
+                textarea{
+                    height: 80vh;
+                    &:last-child{
+                        margin-top: 0px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
